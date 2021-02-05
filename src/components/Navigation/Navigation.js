@@ -15,7 +15,7 @@ const Navigation = props => (
                     <NavLink to="/" className="nav-link text-success  mx-2 text-uppercase font-weight-bold">Home</NavLink>
                 </li>
 
-                <li className="nav-item dropdown">
+                {/* <li className="nav-item dropdown">
                     <NavLink to="/products"
                         className="nav-link dropdown-toggle text-success mx-2 text-uppercase font-weight-bold"
                         id="navbarDropdown"
@@ -30,8 +30,8 @@ const Navigation = props => (
                         <div className="dropdown-divider"></div>
                         <NavLink to="/" className="dropdown-item" s>Something else here</NavLink>
                     </div>
-                </li>
-                <li className="nav-item ">
+                </li>*/}
+                <li className="nav-item "> 
                     <NavLink to="/about" className="nav-link text-success  mx-2 text-uppercase font-weight-bold">About Us</NavLink>
                 </li>
                 <li className="nav-item ">
