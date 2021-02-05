@@ -1,0 +1,116 @@
+/* pagecontent */
+.AboutUs{
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)), url('../../assets/pexels-fauxels-3182759.jpg');
+}
+
+.Banner_About{
+  animation: aboutus .7s ease-in;
+  transition: all;
+}
+.Vision{
+  text-align: right;
+  animation: vision .7s ease-in;
+  transition: all;
+}
+.Core{
+  
+  animation: core 1s ease-in;
+  transition: all;
+}
+
+/* pagecontent ends*/
+
+@keyframes aboutus{
+  0%{
+    opacity:0;
+    transform: translateX(-120px)
+  }
+  100%{
+    opacity:1;
+    transform: translateX(0)
+  }
+}
+@keyframes core{
+  0%{
+    opacity:0;
+    
+  }
+  100%{
+    opacity:1;
+    
+  }
+}
+@keyframes vision{
+  0%{
+    opacity:0;
+    transform: translateX(120px)
+  }
+  100%{
+    opacity:1;
+    transform: translateX(0)
+  }
+}
+/* images */
+.Img1{
+   animation: slide_in 1s ease-in-out;
+  transition:all;
+ }
+.Img2{
+   animation: slide_in_2 1s ease-in-out;
+   transition:all;
+  
+ }
+.Img3{
+   animation: slide_in3 1s ease-in-out;
+   transition:all;
+  
+ }
+ 
+ @media (max-width: 500px){
+        .AboutUs{
+          height: 100vh;
+        }
+        .Banner_About, .Vision{
+          text-align: center;
+          padding: 2%;
+        }
+      }
+ @keyframes slide_in_2{
+    0%{
+      opacity: 0;
+      transform: translateY(-150px);
+    }
+ 
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+     
+    }
+  }
+ @keyframes slide_in{
+    0%{
+      opacity: 0;
+      transform: translateX(-150px);
+    }
+    
+    100%{
+      opacity: 1;
+      transform: translateX(0);
+    
+    }
+  }
+ @keyframes slide_in3{
+    0%{
+      opacity: 0;
+      transform: translateX(150px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateX(0);
+     
+    }
+  }
