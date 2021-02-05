@@ -38,10 +38,10 @@ const Navigation = props => (
                     <NavLink to="/calculator" className="nav-link text-success  mx-2 text-uppercase font-weight-bold">Loan Calculator</NavLink>
                 </li>
                 <li className="nav-item ">
-                    <NavLink to="/login" className="nav-link text-success  mx-2 text-uppercase font-weight-bold">Login</NavLink>
+                    <NavLink to="/" className="nav-link text-success  mx-2 text-uppercase font-weight-bold">Login</NavLink>
                 </li>
                 <li className="nav-item ">
-                    <NavLink to="/signup" className="nav-link text-success  mx-2 text-uppercase font-weight-bold">Sign Up</NavLink>
+                    <NavLink to="/" className="nav-link text-success  mx-2 text-uppercase font-weight-bold">Sign Up</NavLink>
                 </li>
             </ul>
         </div>
