@@ -27,8 +27,7 @@ border-radius: 5px;
 
 @media (max-width: 1024px){
     .Calculator{
-        background-color: rgba(16, 41, 27, 0.8);
-        padding: 2%;
+        
         width: 90%;
         border-radius: 5px;
         }
