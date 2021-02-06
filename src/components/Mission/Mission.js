@@ -18,8 +18,8 @@ const Mission = props => (
                             <img src={Vision} loading="lazy" className="card-img-top"  alt="about us" />
                             <div className="card-body" >
                                 <h3 className="h4 text-capitalize text-muted">vision</h3>
-                                <p className="lead card-text"> We exceed our customers expectations in our commitment to their financial success. </p>
-                                <NavLink to='/about' className="btn btn-success">Read More</NavLink>
+                                <p className=" card-text"> We exceed our customers expectations in our commitment to their financial success. </p>
+                                <NavLink to='/about' className="text-success font-weight-bold">Read More</NavLink>
                             </div>
                         </div>
 
@@ -29,8 +29,8 @@ const Mission = props => (
                             <img src={Goal} loading="lazy" className="card-img-top"  alt="about us" />
                             <div className="card-body" >
                                 <h3 className="h4 text-capitalize text-muted">mission</h3>
-                                <p className="lead card-text"> PGIL is a dynamic full-service financial institution, operating safely and profitably.</p>
-                                <NavLink to="/about" className="btn btn-success">Read More</NavLink>
+                                <p className=" card-text"> PGIL is a dynamic full-service financial institution, operating safely and profitably.</p>
+                                <NavLink to="/about" className="text-success font-weight-bold">Read More</NavLink>
                             </div>
                         </div>
 
@@ -40,8 +40,8 @@ const Mission = props => (
                             <img src={mission} loading="lazy" className="card-img-top"  alt="about us" />
                             <div className="card-body" >
                                 <h3 className="h4 text-capitalize text-muted">promise</h3>
-                                <p className="lead card-text"> We will strengthen these relationship  providing the right solution.</p>
-                                <NavLink to="/about" className="btn btn-success">Read More</NavLink>
+                                <p className=" card-text"> We will strengthen these relationship  providing the right solution.</p>
+                                <NavLink to="/about" className="text-success font-weight-bold">Read More</NavLink>
                             </div>
                         </div>
 
@@ -51,8 +51,8 @@ const Mission = props => (
                             <img src={Goals} loading="lazy" className="card-img-top"  alt="about us" />
                             <div className="card-body" >
                                 <h3 className="h4 text-capitalize text-muted">goals</h3>
-                                <p className="lead card-text">PGIL  goal is to create customer  loyalty , shareholder value  and...</p>
-                                <NavLink to="/about" className="btn btn-success">Read More</NavLink>
+                                <p className=" card-text">PGIL  goal is to create customer  loyalty , shareholder value  and...</p>
+                                <NavLink to="/about" className="text-success">Read More</NavLink>
                             </div>
                         </div>
 

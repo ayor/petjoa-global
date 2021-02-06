@@ -42,8 +42,8 @@ const About = () => {
                                 <img src={Services} loading="lazy" className={`card-img-top ${imageClasses[0]}`} alt="about us" />
                                 <div className="card-body" >
                                     <h3 className="h4 text-capitalize text-muted">know us</h3>
-                                    <p className="lead card-text"> <span className="font-italics font-weight-bold text-success ">PETJOA GLOBAL INVESTMENT LIMITED</span> is a thrift firm that lends money to bankers and professional bodies (salary earners) with static…</p>
-                                    <NavLink to="/about" className="btn btn-success">Read More</NavLink>
+                                    <p className=" card-text"> <span className="font-italics font-weight-bold text-success ">PETJOA GLOBAL INVESTMENT LIMITED</span> is a thrift firm that lends money to bankers and professional bodies (salary earners) with static…</p>
+                                    <NavLink to="/about" className="text-success font-weight-bold">Read More</NavLink>
                                 </div>
                             </div>
 
@@ -54,8 +54,8 @@ const About = () => {
                                 <img src={AboutUS} loading="lazy"  className={`card-img-top ${imageClasses[1]}`} alt="about us" />
                                 <div className="card-body" >
                                     <h3 className="h3 text-capitalize text-muted">our services</h3>
-                                    <p className="lead card-text">We offer a diverse range of loan products to help business people like you build on their success.   Unlike… </p>
-                                    <NavLink to="/about" className="btn btn-success">Read More</NavLink>
+                                    <p className=" card-text">We offer a diverse range of loan products to help business people like you build on their success.   Unlike… </p>
+                                    <NavLink to="/about" className="text-success font-weight-bold">Read More</NavLink>
                                 </div>
                             </div>
                         </div>
@@ -65,8 +65,8 @@ const About = () => {
                                 <img src={LoanCal} loading="lazy" className={`card-img-top ${imageClasses[2]}`} alt="about us" />
                                 <div className="card-body" >
                                     <h3 className="h3 text-capitalize text-muted">calculate loan repayment</h3>
-                                    <p className="lead card-text">Calculate and plan your repayment schdedule before hand. </p>
-                                    <NavLink to="/about" className="btn btn-success">Read More</NavLink>
+                                    <p className=" card-text">Calculate and plan your repayment schdedule before hand. </p>
+                                    <NavLink to="/about" className="text-success font-weight-bold">Read More</NavLink>
                                 </div>
                             </div>
                         </div>

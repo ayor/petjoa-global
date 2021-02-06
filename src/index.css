@@ -22,7 +22,8 @@ nav {
 
 html{
   scroll-behavior: smooth;
-  font-family: sans-serif;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 1rem;
 }
 
 .nav_bar{
@@ -30,3 +31,22 @@ html{
 }
 
 
+@media (max-width: 1024px) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 780px) {
+  html {
+    font-size: 1rem;
+  }
+}
+
+
+
+@media (max-width: 500px) {
+  html {
+    font-size: .8rem;
+  }
+}

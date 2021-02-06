@@ -5,11 +5,13 @@ import About from './About/AboutUsPage';
 import Footer from './Footer/Footer';
 import Navigation from './Navigation/Navigation';
 import Calculator from './Calculator/Calculator';
+import Login from './Auth/Login';
 
-const Layout = props => {
+const Layout = () => {
     return (<Router >
         <Navigation />
         <Switch>
+            <Route path="/login" component={Login} />
             <Route path="/about" component={About} />
             <Route path="/calculator" component={Calculator}/>
             <Route component={Home} path="/" />

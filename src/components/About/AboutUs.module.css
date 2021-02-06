@@ -16,6 +16,21 @@
   animation: vision .7s ease-in;
   transition: all;
 }
+
+.CoreImage{
+  height: 60vh;
+  background-position: center top;
+  background-size: 100% 100%;
+          background-repeat: no-repeat;
+  background: url('../../assets/pexels-lukas-669580.jpg');
+}
+.PromiseImage{
+  height: 60vh;
+  background-position:  top;
+  background-size: 100% 100%;
+          background-repeat: no-repeat;
+  background: url('../../assets/pexels-cade-prior-4009355.jpg');
+}
 .Core{
   
   animation: core 1s ease-in;
@@ -70,13 +85,45 @@
   
  }
  
- @media (max-width: 500px){
+
+ @media (max-width: 600px){
         .AboutUs{
           height: 100vh;
         }
         .Banner_About, .Vision{
           text-align: center;
           padding: 2%;
+        }
+        .CoreImage{        
+          background-size: 100% 80%;
+          background-repeat: no-repeat;
+         margin-bottom: -20%;
+        }
+        .PromiseImage{
+          background-size: 100% 80%;
+          background-repeat: no-repeat;
+         margin-bottom: -20%;
+        }
+      }
+
+      @media (max-width: 414px){
+        .AboutUs{
+          height: 100vh;
+        }
+        .Banner_About, .Vision
+        , .Core, .Promise{
+          text-align: center;
+          padding: 2%;
+        }
+        .CoreImage{        
+          background-size: 100% 80%;
+          background-repeat: no-repeat;
+         margin-bottom: -20%;
+        }
+        .PromiseImage{
+          background-size: 100% 80%;
+          background-repeat: no-repeat;
+         margin-bottom: -20%;
         }
       }
  @keyframes slide_in_2{
