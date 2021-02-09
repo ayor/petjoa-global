@@ -9,7 +9,7 @@ const Signup = () => {
                     <p className="h1 font-weight-bold mb-3"> <span className="text-light">Sign</span> <span className="text-success">Up</span> </p>
                     <div className="input-group my-2">
                         <div className="input-group-prepend">
-                            <i className="fa fa-user fa-2x text-muted input-group-text"></i>
+                            <i className="fa fa-user pt-2 text-muted input-group-text"></i>
                         </div>
                         <input name="firstname" type="text"  className="form-control " placeholder="First Name" />
                     </div>
@@ -17,7 +17,7 @@ const Signup = () => {
 
                     <div className="input-group my-2">
                         <div className="input-group-prepend">
-                            <i className="fa fa-user fa-2x text-muted input-group-text"></i>
+                            <i className="fa fa-user pt-2  text-muted input-group-text"></i>
                         </div>
                         <input name="lastname" type="text"  className="form-control " placeholder="Last Name" />
                     </div>
@@ -32,7 +32,7 @@ const Signup = () => {
                   
                     <div className="input-group my-2">
                         <div className="input-group-prepend">
-                            <i className="fa fa-key fa-2x text-muted input-group-text"></i>
+                            <i className="fa fa-key pt-2 text-muted input-group-text"></i>
                         </div>
                         {/* ref={register({
                             required: true,

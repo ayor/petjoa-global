@@ -25,7 +25,7 @@ const Login = (props) => {
             {errors.email && <span className="text-warning">Enter a valid email</span>}
             <div className="input-group my-2">
                 <div className="input-group-prepend">
-                    <i className="fa fa-key fa-2x text-muted input-group-text"></i>
+                    <i className="fa fa-key pt-2 text-muted input-group-text"></i>
                 </div>
 
 
