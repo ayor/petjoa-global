@@ -5,14 +5,16 @@ import About from './About/AboutUsPage';
 import Footer from './Footer/Footer';
 import Navigation from './Navigation/Navigation';
 import Calculator from './Calculator/Calculator';
-import Login from './Auth/Login';
+import Dashboard from './Dashboard/Dashboard';
+import LoginPage from './Auth/LoginPage';
 
 const Layout = () => {
     return (<Router >
         <Navigation />
         <Switch>
-            <Route path="/login" component={Login} />
+            <Route path="/auth" component={LoginPage} />
             <Route path="/about" component={About} />
+            <Route path="/dashboard" component={Dashboard}/>
             <Route path="/calculator" component={Calculator}/>
             <Route component={Home} path="/" />
             

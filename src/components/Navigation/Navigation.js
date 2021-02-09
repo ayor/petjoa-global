@@ -40,7 +40,7 @@ const Navigation = props => (
                         <NavLink to="/calculator" className="nav-link text-success  mx-2 text-uppercase font-weight-bold">Loan Calculator</NavLink>
                     </li>
                     <li className="nav-item ">
-                        <NavLink to="/login" className="nav-link text-success  mx-2 text-uppercase font-weight-bold">Login / Sign Up</NavLink>
+                        <NavLink to="/auth" className="nav-link text-success  mx-2 text-uppercase font-weight-bold">Login / Sign Up</NavLink>
                     </li>
                    
                 </ul>
