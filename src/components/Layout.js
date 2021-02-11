@@ -11,7 +11,7 @@ import LoginPage from './Auth/LoginPage';
 const Layout = () => {
     return (<Router >
         <Navigation />
-        <Switch>
+        <Switch >
             <Route path="/auth" component={LoginPage} />
             <Route path="/about" component={About} />
             <Route path="/dashboard" component={Dashboard}/>

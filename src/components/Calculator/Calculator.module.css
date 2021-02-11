@@ -7,6 +7,7 @@ background-color: rgba(16, 41, 27, 0.8);
 padding: 2%;
 width: 30%;
 border-radius: 5px;
+animation: fade-in 1s ease ;
 }
 .CalculatorHeader { 
     background-position: left;
@@ -31,4 +32,13 @@ border-radius: 5px;
         width: 90%;
         border-radius: 5px;
         }
+}
+
+@keyframes fade-in{
+    0%{
+      opacity: 0;  
+    }
+    100%{
+      opacity: 1;
+    }
 }

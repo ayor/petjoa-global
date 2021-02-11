@@ -1,7 +1,23 @@
 .SideNav {
-    background:rgba(6, 15, 10, 0.8);
+    background:rgba(12, 31, 21, 0.8);
 }
 
 .Card {
-    background:rgba(6, 15, 10, 0.8);
+    background:rgba(19, 48, 32, 0.8);
+    box-shadow: 1px 2px 2px 2px rgb(149, 190, 159);
+}
+
+.Doughnut_Card{
+    margin:2% auto; 
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 10px solid #ccc;
+}
+.Doughnut_Score{
+    margin:2% auto; 
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 10px solid red;
 }
