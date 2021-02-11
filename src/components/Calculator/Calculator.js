@@ -22,8 +22,8 @@ const Calculator = () => {
         const rate = 5.5 / 100;
         const interest = (+amount * rate);
         const totalInterest = interest * loanData['duration'];
-        const repaymentAmount = (amount / loanData['duration']);
-        const total = +amount + totalInterest;
+        const repaymentAmount = (amount / loanData['duration']) + interest;
+        const total = repaymentAmount * loanData['duration'];
 
         let txtRepayment = new Intl.NumberFormat().format(repaymentAmount.toFixed(2));
         let txtInterest = new Intl.NumberFormat().format(totalInterest.toFixed(2));
@@ -41,8 +41,8 @@ const Calculator = () => {
         const rate = 5.5 / 100;
         const interest = (+loanData['loanAmount'] * rate);
         const totalInterest = interest * dur;
-        const repaymentAmount = (+loanData['loanAmount'] / dur);
-        const total = +loanData['loanAmount'] + totalInterest;
+        const repaymentAmount = (+loanData['loanAmount'] / dur) + interest;
+        const total = repaymentAmount * dur ;
 
         let txtRepayment = new Intl.NumberFormat().format(repaymentAmount.toFixed(2));
         let txtInterest = new Intl.NumberFormat().format(totalInterest.toFixed(2));

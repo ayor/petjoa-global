@@ -30,8 +30,7 @@ const Login = (props) => {
 
 
                 <input name="password" ref={register({
-                    required: true,
-                    pattern: /^[A-Za-z]+$/i,
+                    required: true,                    
                     minLength: 6
                 })} type="password" className="form-control" placeholder="Password" />
             </div>
