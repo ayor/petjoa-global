@@ -27,10 +27,12 @@ animation: fade-in 1s ease ;
 }
 
 @media (max-width: 1024px){
-    .Calculator{
-        
+    .Calculator{        
         width: 90%;
         border-radius: 5px;
+        }
+        .CalculatorHeader > p{
+            font-size: 15px;
         }
 }
 
