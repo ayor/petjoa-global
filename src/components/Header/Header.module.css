@@ -1,24 +1,19 @@
 .Header{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    
-    width:100%;
-    background-position: center;    
-    background-size: cover;
+
+     background-position: center;    
+    background-size: contain;
     background-repeat: no-repeat;
-    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.7)), url(../../assets/pexels-lukas-669610.jpg);
+    background:  url('../../assets/33092.png'); 
 }
 
  .HeaderText {
+    font-family: 'Roboto', sans-serif;
     animation: fade_in 1s ease-in;
     transition: all ease-in;
 }
 
 .Banner{
-    width: 25%;
+    /* width: 25%; */
     text-align: center;
     animation: slide_up ease-out .6s;
     animation-fill-mode: backwards;

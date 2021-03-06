@@ -1,0 +1,42 @@
+.Form {
+    box-shadow: 1px 2px 2px 3px #ccc;
+    border-radius: 1%;
+}
+.Calculator{
+background-color: rgba(22, 56, 37, 0.8);
+border: 0;
+animation: fade-in 1s ease ;
+}
+/* .CalculatorHeader { 
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+ background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.9)), url('../../assets/pexels-oleg-magni-2058132.jpg') ; 
+} */
+
+
+
+@media (max-width: 1304px){
+    .Calculator{  
+        width: 100%;    
+        }
+}
+
+@media (max-width: 1024px){
+    .Calculator{        
+        width: 90%;
+        border-radius: 5px;
+        }
+        .CalculatorHeader > p{
+            font-size: 15px;
+        }
+}
+
+@keyframes fade-in{
+    0%{
+      opacity: 0;  
+    }
+    100%{
+      opacity: 1;
+    }
+}

@@ -7,28 +7,7 @@ import AboutUs_Classes from './AboutUs.module.css';
 
 
 const About = () => {
-    const [imageClasses, setImageClasses] = useState([])
-    useEffect(() => {
-        document.addEventListener('scroll', () => {
-            if (window.scrollY >= 204) {
-
-                setImageClasses([AboutUs_Classes.Img1, AboutUs_Classes.Img2, AboutUs_Classes.Img3]);
-            } else {
-
-                setImageClasses([])
-            }
-        });
-        return () => {
-            document.removeEventListener('scroll', () => {
-                if (window.scrollY >= 204) {
-                    setImageClasses([AboutUs_Classes.Img1, AboutUs_Classes.Img2, AboutUs_Classes.Img3]);
-
-                } else {
-                    setImageClasses([])
-                }
-            });
-        }
-    }, [])
+    
     return (
         <React.Fragment>
             <div className="row" id="About" >

@@ -1,66 +1,94 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Vision from '../../assets/pexels-fauxels-3184430.jpg';
-import Goal from '../../assets/pexels-pixabay-265087.jpg';
-import Goals from '../../assets/pexels-skitterphoto-15812.jpg';
-import mission from '../../assets/pexels-pixabay-415071.jpg';
+import studentImg from '../../assets/414342-PDTRP3-756.jpg';
+import personalImg from '../../assets/5106930.jpg';
+import enterpriseImg from '../../assets/20943729.jpg';
+import missionClasses from './Mission.module.css';
 
 const Mission = props => (
     <React.Fragment>
-        <div className="row">
-            <div className="col">
-                <p className="display-4 text-muted text-center font-weight-bold m-3 pt-3">Our Misson</p>
-<hr/>
-                <div className="row justify-content-center text-center p-3 mt-5">
-
-                    <div className=" col-12 col-sm-12 col-md-6 col-lg-3 mb-5 col-xl-3">
-                        <div className="card mx-auto" >
-                            <img src={Vision} loading="lazy" className="card-img-top"  alt="about us" />
-                            <div className="card-body" >
-                                <h3 className="h4 text-capitalize text-muted">vision</h3>
-                                <p className=" card-text"> We exceed our customers expectations in our commitment to their financial success. </p>
-                                <NavLink to='/about' className="text-success font-weight-bold">Read More</NavLink>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div className=" col-12 col-md-6 col-lg-3 mb-5 col-xl-3">
-                        <div className="card mx-auto" >
-                            <img src={Goal} loading="lazy" className="card-img-top"  alt="about us" />
-                            <div className="card-body" >
-                                <h3 className="h4 text-capitalize text-muted">mission</h3>
-                                <p className=" card-text"> PGIL is a dynamic full-service financial institution, operating safely and profitably.</p>
-                                <NavLink to="/about" className="text-success font-weight-bold">Read More</NavLink>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div className=" col-12 col-md-6 col-lg-3 mb-5 col-xl-3">
-                        <div className="card mx-auto" >
-                            <img src={mission} loading="lazy" className="card-img-top"  alt="about us" />
-                            <div className="card-body" >
-                                <h3 className="h4 text-capitalize text-muted">promise</h3>
-                                <p className=" card-text"> We will strengthen these relationship  providing the right solution.</p>
-                                <NavLink to="/about" className="text-success font-weight-bold">Read More</NavLink>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div className=" col-12 col-md-6 col-lg-3 mb-5 col-xl-3">
-                        <div className="card mx-auto" >
-                            <img src={Goals} loading="lazy" className="card-img-top"  alt="about us" />
-                            <div className="card-body" >
-                                <h3 className="h4 text-capitalize text-muted">goals</h3>
-                                <p className=" card-text">PGIL  goal is to create customer  loyalty , shareholder value  and...</p>
-                                <NavLink to="/about" className="text-success">Read More</NavLink>
-                            </div>
-                        </div>
-
+        <div className="row mt-5 justify-content-center p-5" id="products">
+            <div className="col-12 col-md-6 col-lg-3">
+                <div className={"card p-2  mb-3 " + missionClasses.Cards} >
+                    <img src={studentImg} className="img-fluid rounded card-image-top w-50 mx-auto " alt="students loan" />
+                    <div className="card-body" >
+                        <h3 className="h1 text-capitalize text-center font-weight-bold">Students Loans</h3>
+                        <p className="  text-muted "> We are committed to supporting young individuals to achieve thier dreams of fulfilling their educational dreams. </p>
                     </div>
                 </div>
+
+            </div>
+
+            <div className="col-12 col-md-6 col-lg-3 ">
+                <div className={"card p-2  mb-3 " + missionClasses.Cards} >
+                    <img src={personalImg} className="img-fluid rounded card-image-top w-50 mx-auto" alt="personal loan" />
+
+                    <div className="card-body" >
+                        <h3 className="h1 text-center text-capitalize font-weight-bold ">Personal Loans</h3>
+                        <p className=" text-muted card-text">Salary earners have easy access to funds within 10 minutes. <br/><small className="text-success font-weight-bold">terms and conditions apply</small> </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div className="col-12 col-md-6 col-lg-3">
+                <div className={"card p-2  mb-3 " + missionClasses.Cards} >
+                    <img src={enterpriseImg} className="img-fluid rounded card-image-top w-50 mx-auto" alt="enterprise loan" />
+                    <div className="card-body" >
+                        <h3 className="h1 text-center text-capitalize font-weight-bold text-dark">Enterprise Loans</h3>
+                        <p className="  text-muted "> We are committed to supporting young individuals to achieve thier dreams of fulfilling their educational dreams. </p>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </React.Fragment>
+        <div className="row mt-5 justify-content-center bg-dark p-5" id="process">
+            <div className="col">
+                <div className="text-center how_it_works_header_text w-50 mx-auto">
+                    <p className=" text-uppercase text-warning">How it  works</p>
+                    <h1 className="h3 font-weight-bold text-light">Access to finance in minutes</h1>
+                    <p className="text-muted" > We make use of technology to save your time and our processes are tailored to remove bottlenecks which include uneccesary paper work in processing your loan. </p>
+                </div>
+                <div className="row">
+                    <div className="col text-center">
+                        <div className="card p-2 border-0 mb-3 bg-dark" >
+                            <div className="card-body text-light" >
+                                <h3 className="h3 text-capitalize font-weight-bold">Step 1</h3>
+                                <p className="  text-warning "> Click on the get loan button </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col text-center">
+                        <div className="card p-2 border-0 mb-3 bg-dark" >
+                            <div className="card-body text-light" >
+                                <h3 className="h3 text-capitalize  font-weight-bold">Step 2</h3>
+                                <p className="  text-warning "> create an account with us. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col text-center">
+                        <div className="card p-2 border-0 mb-3 bg-dark" >
+                            <div className="card-body text-light" >
+                                <h3 className="h3 text-capitalize  font-weight-bold">Step 3</h3>
+                                <p className="  text-warning "> request a loan </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div className="get_loan_button text-center">
+                    <NavLink to="/dashboard/loan" className="btn btn-success " >Get A Loan  </NavLink>
+                </div>
+
+
+            </div>
+        </div>
+
+    </React.Fragment >
 );
 
 export default Mission;
+

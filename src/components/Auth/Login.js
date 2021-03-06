@@ -1,21 +1,18 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { NavLink, withRouter } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import LoginClass from './Login.module.css';
+import Loader from '../Loading/Loading';
 
 const Login = (props) => {
     const { register, handleSubmit, errors } = useForm();
-
-
-    const submitHandler = (data, event) => {
-        event.preventDefault();
-        console.log(data)
-        props.history.push('/dashboard')
-    }
+    
+ 
     return (<React.Fragment>
 
-        <form onSubmit={handleSubmit(submitHandler)} className={"p-5 row align-self-center " + LoginClass.Form}>
-            <p className="h1 font-weight-bold mb-3"> <span className="text-light">Log</span> <span className="text-success">In</span> </p>
+        <form onSubmit={handleSubmit(props.submitHandler)} className={"p-5 row align-self-center " + LoginClass.Form}>
+            <p className="h1 font-weight-bold mb-3 w-100"> <span className="text-light">Log</span> <span className="text-success">In</span> </p>
+            <p className="text-warning">{props.errorMessage}</p>
             <div className="input-group my-2">
                 <div className="input-group-prepend">
                     <div className="text-muted input-group-text">@</div>
@@ -35,7 +32,7 @@ const Login = (props) => {
                 })} type="password" className="form-control" placeholder="Password" />
             </div>
             {errors.password && <span className="text-warning">Password must have a minimum of 6 characters</span>}
-            <button type="submit" className="btn btn-dark  text-center w-100  mx-auto mt-3">Login</button>
+            <button type="submit" className="btn btn-dark  text-center w-100  mx-auto mt-3">{ !props.loadState ?  "Login" : <Loader/> }</button>
 
             <p className="mt-3 text-light text-center">New User?  <NavLink to="/auth/signup" className="text-success font-weight-bold">Sign up here</NavLink></p>
         </form>
@@ -43,4 +40,4 @@ const Login = (props) => {
     </React.Fragment>)
 };
 
-export default withRouter(Login);
+export default Login;

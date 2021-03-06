@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Footer = props => (<React.Fragment>
-    <div className="row text-center border-top p-3 " style={{
+    <footer className="row text-center border-top p-3  " style={{
         backgroundColor: "rgba(0,0,0,0.9)"
     }}>
         <div className="col-12 col-md-6 col-lg-4">
@@ -81,7 +81,7 @@ const Footer = props => (<React.Fragment>
             </div>
 
         </div>
-    </div>
+    </footer>
 
 </React.Fragment>);
 

@@ -1,0 +1,23 @@
+.Hamburger{
+    display: none;
+}
+.NavLink{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.CurrentNavLink {
+    color:chocolate;
+    border-bottom: 2px groove rgb(15, 80, 153);
+}
+
+@media (max-width: 1024px){
+    .NavLink {
+        display: none;
+    }
+    .Hamburger{
+        display: block;
+    }
+
+}

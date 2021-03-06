@@ -1,0 +1,39 @@
+.Backdrop{
+        position: absolute;
+        top: 0;
+        width:100%;
+        margin-right: 0 !important;
+        z-index:1;
+        height:100vh;
+        background-color:rgba(31, 31, 31, 0.719);
+        transition: all ;
+        animation: slide-in .1s ease-in forwards;
+}
+
+.Sidedrawer{
+    position: absolute;
+        width:70%;
+        top:0;
+        left:0;
+        z-index:5;
+        height: 100vh;
+        overflow: hidden;
+        background-color:rgb(62, 85, 72);
+        transition: all ;
+        animation: slide-in .1s ease-in forwards;
+}
+
+@keyframes slide-in {
+    0%{
+        transform: translateX(-100px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 750px){
+    .Sidedrawer{
+        letter-spacing: 2px;
+    }
+}

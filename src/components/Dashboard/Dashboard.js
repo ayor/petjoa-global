@@ -1,18 +1,29 @@
 import React from 'react';
-import Sidenav from './Sidenav';
-import Summary from './Summary';
+// import Sidenav from './Sidenav';
+import DashboardNav from './DashboardNav';
+import Summary from './Summary/Summary';
+import Loan from './Calculator/Calculator';
+import Settings from './Settings/Settings';
+import BackToTop from '../BackToTop/BackToTop';
+import { Switch, Route } from "react-router-dom";
 
-import DashboardClasses from './Dashboard.module.css'
+const Dashboard = (props) => (<React.Fragment>
+        <div className="container">
+            <div className="row vh-100" >
+                <div className={"col-12 col-md-12 h-100 col-lg-12 mt-lg-5 text-light "} id="dashboard">
+                    <DashboardNav />
+                    <Switch>
+                        <Route render={() => <Settings {...props} />} path="/dashboard/settings" />
+                        <Route render={() => <Summary {...props} />} path="/dashboard/summary" />
+                        <Route render={() => <Loan {...props} />} path="/dashboard/loan" />
+                    </Switch>
 
-const Dashboard = () => (<React.Fragment>
-    <div className="row vh-100">
-        <div className={"col-12 col-md-3 col-lg-2 " + DashboardClasses.SideNav}>
-            <Sidenav />
+                </div>
+                <BackToTop destination="#dashboard" />
+            </div >
         </div>
-        <div className={"col-12 col-md-9 col-lg-10 text-light"}>
-            <Summary/>
-             </div>
-    </div >
-</React.Fragment >)
+
+    </React.Fragment >)
+
 
 export default Dashboard;

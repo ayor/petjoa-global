@@ -1,15 +1,15 @@
 import React from 'react';
-import About from '../About/About';
+import About from '../About/AboutUsPage';
 import Mission from '../Mission/Mission';
-
+import BackToTop from '../BackToTop/BackToTop';
 import Header from '../Header/Header';
 
 const Home = () => (
-        <div >
+        <React.Fragment >
             <Header />
             <About />
             <Mission />
-            
-        </div >);
+            <BackToTop destination="#home"/>
+        </React.Fragment >);
 
 export default Home;

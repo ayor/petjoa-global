@@ -1,0 +1,20 @@
+.Cards{
+    border: 0;
+    box-shadow: 1px 1px 2px 2px #ccc;
+    transition: all;
+
+}
+
+.Cards:hover{
+    animation: smear .4s ease-in forwards;
+   
+}
+
+@keyframes smear {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
