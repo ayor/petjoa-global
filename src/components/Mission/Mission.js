@@ -12,7 +12,7 @@ const Mission = props => (
                 <div className={"card p-2  mb-3 " + missionClasses.Cards} >
                     <img src={studentImg} className="img-fluid rounded card-image-top w-50 mx-auto " alt="students loan" />
                     <div className="card-body" >
-                        <h3 className="h1 text-capitalize text-center font-weight-bold">Students Loans</h3>
+                        <h3 className=" text-capitalize text-center mb-2 font-weight-bold">Students Loans</h3>
                         <p className="  text-muted "> We are committed to supporting young individuals to achieve thier dreams of fulfilling their educational dreams. </p>
                     </div>
                 </div>
@@ -21,10 +21,10 @@ const Mission = props => (
 
             <div className="col-12 col-md-6 col-lg-3 ">
                 <div className={"card p-2  mb-3 " + missionClasses.Cards} >
-                    <img src={personalImg} className="img-fluid rounded card-image-top w-50 mx-auto" alt="personal loan" />
+                    <img src={personalImg} className="img-fluid rounded  card-image-top w-50 mx-auto" alt="personal loan" />
 
                     <div className="card-body" >
-                        <h3 className="h1 text-center text-capitalize font-weight-bold ">Personal Loans</h3>
+                        <h3 className=" text-center text-capitalize mb-2 font-weight-bold ">Personal Loans</h3>
                         <p className=" text-muted card-text">Salary earners have easy access to funds within 10 minutes. <br/><small className="text-success font-weight-bold">terms and conditions apply</small> </p>
                     </div>
                 </div>
@@ -33,9 +33,9 @@ const Mission = props => (
 
             <div className="col-12 col-md-6 col-lg-3">
                 <div className={"card p-2  mb-3 " + missionClasses.Cards} >
-                    <img src={enterpriseImg} className="img-fluid rounded card-image-top w-50 mx-auto" alt="enterprise loan" />
+                    <img src={enterpriseImg} className="img-fluid rounded  card-image-top w-50 mx-auto" alt="enterprise loan" />
                     <div className="card-body" >
-                        <h3 className="h1 text-center text-capitalize font-weight-bold text-dark">Enterprise Loans</h3>
+                        <h3 className=" text-center text-capitalize mb-2 font-weight-bold text-dark">Enterprise Loans</h3>
                         <p className="  text-muted "> We are committed to supporting young individuals to achieve thier dreams of fulfilling their educational dreams. </p>
                     </div>
                 </div>

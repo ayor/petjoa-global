@@ -13,22 +13,22 @@ const Totals = props => {
     });
     return (<React.Fragment>
         <div className={"border-bottom p-2 "} >
-            <div className="row mt-lg-4 mt-md-3 mt-2 p-2 text-center  " >
+            <div className="row mt-md-3 mt-2 p-2 text-center text-dark " >
                 <div className="col-12  col-md-4">
-                    <div className={"card  " + DashboardClasses.Card}>
+                    <div className={"card mb-3 " + DashboardClasses.Card_Pending}>
                         <div className="card-header">
                             <p className="">Total loans</p>
 
                         </div>
                         <div className="card-body">
                             <p className=" font-weight-bold">  {props.user.loans.length}</p>
-                            <img src={loanSumm} width="150" alt="summary" />
+                            <img className="img-fluid mx-auto" src={loanSumm} width="150" alt="summary" />
                         </div>
                     </div>
 
                 </div>
                 <div className="col-12  col-md-4">
-                    <div className={"card " + DashboardClasses.Card}>
+                    <div className={"card mb-3 " + DashboardClasses.Card_Active}>
                         <div className="card-header">
 
                             <p className="">Loaned Amount</p>
@@ -36,18 +36,18 @@ const Totals = props => {
                         </div>
                         <div className="card-body">
                             <p className=" font-weight-bold"> NGN {amount.toFixed(2)}</p>
-                            <img src={loanSumm1} width="150" alt="summary" />
+                            <img className="img-fluid mx-auto" src={loanSumm1} width="150" alt="summary" />
                         </div>
                     </div>
                 </div>
                 <div className="col-12  col-md-4">
-                    <div className={"card " + DashboardClasses.Card}>
+                    <div className={"card mb-3 " + DashboardClasses.Card_Overdue}>
                         <div className="card-header">
                             <p className="">Total Paid</p>
                         </div>
                         <div className="card-body">
                             <p className=" font-weight-bold"> NGN 0.00</p>
-                            <img src={loanSumm2} width="150" alt="summary" />
+                            <img className="img-fluid mx-auto" src={loanSumm2} width="150" alt="summary" />
                         </div>
                     </div>
                 </div>

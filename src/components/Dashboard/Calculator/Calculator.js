@@ -7,6 +7,20 @@ import { useReactToPrint } from 'react-to-print';
 
 const Calculator = (props) => {
 
+    const user = props.user;
+
+    const user_keys = Object.keys(user);
+
+    let userIsUpdated = false;
+    
+    user_keys.forEach((key)=> {
+        
+        if(user[key] === ""){
+            userIsUpdated = true;
+            return;
+        }
+    })
+
     const [loanData, setLoanData] = useState({
         loanAmount: 0,
         duration: 6,
@@ -122,27 +136,33 @@ const Calculator = (props) => {
 
     };
     const getLoanHandler = async () => {
-        const newLoan = {
-            ...loanData
-        };
-        const token = localStorage.getItem('token');
-        const response = await axiosInstance('/loan/new_loan', {
-            data: newLoan,
-            method: 'POST',
-            headers: {
-                'Authorization': `Bearer ${token}`
+        try {
+            const newLoan = {
+                ...loanData
+            };
+            const token = localStorage.getItem('token');
+            const response = await axiosInstance('/loan/new_loan', {
+                data: newLoan,
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+            if (response) {
+                setLoanData({
+                    loanAmount: 0,
+                    duration: 6,
+                });
+                setRepayment({
+                    monthlyRate: "0.00",
+                    totalInterest: "0.00",
+                    total: "0.00"
+                });
+                props.history.push('/dashboard/summary');
             }
-        });
-console.log(response)
-        setLoanData({
-            loanAmount: 0,
-            duration: 6,
-        });
-        setRepayment({
-            monthlyRate: "0.00",
-            totalInterest: "0.00",
-            total: "0.00"
-        })
+        } catch (error) {
+            throw error
+        }
     }
 
     return (<React.Fragment>
@@ -198,7 +218,7 @@ console.log(response)
                     <div className="row">
                         <button type="button" className="btn btn-dark col  mr-2 mt-2" onClick={handleClearBtn}>Clear</button>
                         <button type="button" className="btn btn-dark col mr-2 mt-2" onClick={printScheduleHandler}>Print Schedule</button>
-                        <button type="button" className="btn btn-dark col  mt-2" onClick={getLoanHandler}>Get Loan</button>
+                        <button type="button" className="btn btn-dark col  mt-2" onClick={getLoanHandler} disabled={userIsUpdated}>{ userIsUpdated ? "Update your profile":"Send Application"}</button>
                     </div>
 
                 </form>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Hamburger from './Hamburger';
-import { NavLink } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import petjoaLogo from '../../assets/petjoa.png';
 import NavClasses from './Navigation.module.css';
 
@@ -8,12 +8,22 @@ import NavClasses from './Navigation.module.css';
 const Navigation = props => {
 
     const [page, setPage] = useState("home");
-    const [navState]  = useState(["nav-link nv_nav_link  mx-2 text-uppercase text-success"])
-    const [navActiveState]  = useState(["nav-link nv_nav_link  mx-2 text-uppercase text-success", NavClasses.CurrentNavLink]);    
+    const [navState] = useState(["nav-link nv_nav_link  mx-2 text-uppercase text-success"])
+    const [navActiveState] = useState(["nav-link nv_nav_link  mx-2 text-uppercase text-success", NavClasses.CurrentNavLink]);
+
+    const handleSignOut = (authState) => {
+        
+        localStorage.removeItem('token');
+        props.signOut(authState);
+        setPage("home");
+        props.history.push('/home');
+    }
 
     const handleNavClick = (data) => {
         setPage(data);
     }
+
+    const pendingLoans = props.loans.length ? props.loans.filter(loan => loan.status === "PE") : [];
 
     return (<nav className={"navbar navbar-expand-md navbar-light nav_bar fixed-top "}>
         <div className="container-fluid ">
@@ -32,14 +42,21 @@ const Navigation = props => {
                 <div className="collapse navbar-collapse" id="navBar">
                     <ul className="navbar-nav font-weight-bold">
                         <li className="nav-item ">
-                            <a href="/" onClick={handleNavClick.bind(this, "home")} className={page === "home" ? navActiveState.join(' ') : navState.join(' ') }>Home</a>
+                            <NavLink to="/home"  
+                            onClick={handleNavClick.bind(this, "home")}
+                             className={page === "home" ? navActiveState.join(' ') : navState.join(' ')}>Home</NavLink>
                         </li>
                         <li className="nav-item ">
-                            <a href="/home#About" title="About us" onClick={handleNavClick.bind(this, "about")} className={page === "about" ? navActiveState.join(' ') : navState.join(' ') }>About Us</a>
+                            <a href="/home#About"
+                                title="About us"
+                                onClick={handleNavClick.bind(this, "about")}
+                                className={page === "about" ? navActiveState.join(' ') : navState.join(' ')}>About Us</a>
                         </li>
                         <li className="nav-item">
                             <a href="/home#products"
-                                onClick={handleNavClick.bind(this, "product")} className={page === "product" ? navActiveState.join(' ') : navState.join(' ') }>
+                                title="products"
+                                onClick={handleNavClick.bind(this, "products")}
+                                className={page === "products" ? navActiveState.join(' ') : navState.join(' ')}>
                                 Products</a>
                         </li>
                     </ul>
@@ -47,24 +64,36 @@ const Navigation = props => {
             </div>
             <div className={NavClasses.NavLink}>
                 <ul className="navbar-nav font-weight-bold">
-                    {!props.isAuth ? <li className="nav-item ">
-                        <NavLink to="/auth" title="Login" onClick={handleNavClick.bind(this, "login")} className={page === "login" ? navActiveState.join(' ') : navState.join(' ') }>Login / Sign up</NavLink>
-                    </li> : null}
-                    {props.isAuth ? [<li key={1} className="nav-item dropdown">
+                    {!props.isAuth  ? <li className="nav-item ">
+                        <NavLink to="/auth" 
+                        title="Login" 
+                        onClick={handleNavClick.bind(this, "")} 
+                        activeClassName={navActiveState.join(' ')} 
+                        className={navState.join(' ')}>Login / Sign up</NavLink>
+                    </li> : [
+                    <li key={1} className="nav-item dropdown">
                         <NavLink
-                            to="/dashboard/summary"
+                            to={props.user.type === "NA" ? "/dashboard/summary" : "/admin/dashboard"}
                             title="Profile"
-                            className="nav-link   mx-2 text-uppercase text-success"
-                            id="userDropDown"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"> Hi, 
-                            {props.user.firstname}</NavLink>
-                          </li>,
+                            onClick={handleNavClick.bind(this, "")}
+                            activeClassName={navActiveState.join(' ')}
+                            className={navState.join(' ')}>
+                            {"Hi, " + props.user.firstname}</NavLink>
+                    </li>,
                     <li key={2} className="nav-item ">
-                        <NavLink to="/" title="logout" className="nav-link   mx-2 text-uppercase text-success">Sign Out</NavLink>
-                    </li>
-                    ] : null}
+                        <a  
+                            title="logout"
+                            onClick={handleSignOut.bind(this, false)}
+                            className="nav-link mx-2 text-uppercase text-success">Sign Out</a>
+                    </li>, props.user.type === "AD" ? (<li key={3} className="nav-item">
+                        <NavLink
+                            to="/admin/dashboard"
+                            title="admin"
+                            activeClassName={navActiveState.join(' ')}
+                            onClick={handleNavClick.bind(this, "")}
+                            className={navState.concat(NavClasses.AdminNav).join(' ')}> ADMIN <small>{pendingLoans.length}</small></NavLink>
+                    </li>) : null
+                        ]}
                 </ul>
             </div>
         </div>
@@ -72,4 +101,4 @@ const Navigation = props => {
     )
 }
 
-export default Navigation;
+export default withRouter(Navigation);

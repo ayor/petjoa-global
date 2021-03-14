@@ -36,7 +36,7 @@ const AboutUsPage = () => {
                     <div className="col ">
                         <div className={`text-right my-2 `}>
 
-                            <img src={AboutUS} alt="secure transactions" className={"img-fluid rounded " + aboutUs[1]} />
+                            <img src={AboutUS} alt="secure transactions" className={"img-fluid rounded ml-auto " + aboutUs[1]} />
                         </div>
 
                     </div>
@@ -45,7 +45,7 @@ const AboutUsPage = () => {
                         <div className={` p-5  ${aboutUs[0]}`}>
                             <p className="text-success text-uppercase mb-5 font-weight-bold">Financial security at your fingertip</p>
 
-                            <h1 className="h1   text-dark mb-4 font-weight-bold"> Faster, Secure and with lower rates than you can ever imagine...</h1>
+                            <h1 className="text-dark mb-4 font-weight-bold"> Faster, Secure and with lower rates than you can ever imagine...</h1>
 
                             <p className=" text-muted "> we are a financial organization that help bankers and other professionals (salary earners) with static salary date to acheive thier various desires and goals by providing a platfrom to access funds.</p>
                             <div className={" mt-2 "}>
@@ -66,7 +66,7 @@ const AboutUsPage = () => {
                         <div className={`  ml-auto p-5  ${aboutUs[0]}`}>
                             <p className="text-danger text-uppercase mb-5 font-weight-bold">Technology and Finance at its finest</p>
 
-                            <h1 className="h1   text-dark mb-4 font-weight-bold"> We are here to guide and help you!</h1>
+                            <h1 className=" text-dark mb-4 font-weight-bold"> We are here to guide and help you!</h1>
 
                             <p className=" text-muted "> leveraging latest technoloical advancemets in the fin-tech space, we are delighted to providing ease while doing business with you .</p>
                             

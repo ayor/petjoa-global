@@ -18,7 +18,7 @@ const Summary = (props) => {
         <div className={DashboardClasses.Summary}>
             <small className={"text-muted d-block text-right pr-3 " + DashboardClasses.Refresh} onClick={refreshHandler}>Refresh <i className="fa fa-refresh"></i></small>
             <Totals   user={user} />
-            <Details />
+            <Details user={user} />
             <History   user={user} />
         </div>
 

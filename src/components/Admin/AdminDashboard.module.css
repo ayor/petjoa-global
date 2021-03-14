@@ -1,20 +1,9 @@
-.SideNav {
-    /* background:rgba(12, 31, 21, 0.8); */
-    border-right: 1px solid #ccc;
-    font-size: 20px;
-    font-weight: bold;
-    width: 300px;
-}
-
 .Summary {
     /* box-shadow: 1px 2px 1px #ccc; */
     animation: fade-in 1s ease forwards;
     transition: all;
 }
-.Card {
-    background:rgba(46, 83, 64, 0.6);   
-    border: 0 !important;
-}
+
 .Card_Pending {
     background:rgba(67, 116, 91, 0.6);   
     border: 0 !important;
@@ -28,11 +17,20 @@
     border: 0 !important;
 }
 .Settings {
-    background:rgba(67, 116, 91, 0.6);     
+    background:rgba(52, 92, 71, 0.8);   
     color: white;
     border: 0 !important;
     animation: fade-in 1s ease forwards;
     transition: all;
+}
+
+.LoanFeed :hover{
+    cursor: pointer;
+}
+.LoanDetail {
+    background-color: rgba(54, 52, 52, 0.685);
+    animation: fade-in 1s ease forwards;
+    transition: all;  
 }
 
 .Refresh :hover{
@@ -44,7 +42,6 @@
     letter-spacing: 2px;
     
 }
-
 
 .activeClass {
     border-bottom: 2px groove rgba(52, 92, 71, 0.8);
@@ -63,5 +60,16 @@
     }
     100%{
       opacity: 1;
+    }
+}
+@keyframes slide-in{
+    0%{
+      opacity: 0;  
+      transform: translateY(-100px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+
     }
 }

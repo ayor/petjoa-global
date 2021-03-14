@@ -1,13 +1,26 @@
 import React from 'react';
+import Dashboard_Classes from "../Dashboard.module.css";
 import { NavLink } from 'react-router-dom';
 
 
 const Details = (props) => {
 
-    return (<React.Fragment>
-        {/*   */}
+    const user = props.user;
 
-        <div className="row border-bottom mt-lg-3 mt-md-2  p-3 text-dark  ">
+    const user_keys = Object.keys(user);
+
+    let userIsUpdated = false;
+    
+    user_keys.forEach((key)=> {
+        
+        if(user[key] === ""){
+            userIsUpdated = true;
+            return;
+        }
+    })
+
+    return (<React.Fragment>
+        <div className="row border-bottom mt-lg-3 mt-md-2 p-3 text-dark  ">
             <div className={" col-xs-12 col-md-6 "}>
                 <div className={"card  " }>
 
@@ -26,9 +39,12 @@ const Details = (props) => {
                             {/* <i className="fa fa-area-chart fa-5x my-3 text-muted"></i> */}
                             <small className="">Select products to meet your financial needs</small>
                             <div className="d-flex justify-content-end mt-2">
-                                <NavLink to='/dashboard/loan' className="text-success">   
-                                <i className="fa fa-plus-circle mr-3"></i>
-                                 Get New Loan </NavLink>
+                                {
+                                    !userIsUpdated ? (<NavLink to='/dashboard/loan' className="text-success" >   
+                                    <i className="fa fa-plus-circle mr-3"></i>
+                                     Get New Loan </NavLink>) : <NavLink to='/dashboard/settings' className="text-success">Update your profile to request a loan</NavLink>
+                                }
+                                
                             </div>
                         </div>
                     </div>

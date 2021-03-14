@@ -4,9 +4,9 @@ import Mission from '../Mission/Mission';
 import BackToTop from '../BackToTop/BackToTop';
 import Header from '../Header/Header';
 
-const Home = () => (
+const Home = (props) => (
         <React.Fragment >
-            <Header />
+            <Header {...props} />
             <About />
             <Mission />
             <BackToTop destination="#home"/>

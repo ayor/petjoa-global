@@ -7,9 +7,21 @@
     letter-spacing: 1px;
 }
 
+.NavLink > ul > li> a:hover{
+    cursor: pointer;
+}
+
 .CurrentNavLink {
-    color:chocolate;
     border-bottom: 2px groove rgb(15, 80, 153);
+}
+
+.AdminNav > small{
+    content:" ";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 10px;
+    color: orange;
 }
 
 @media (max-width: 1024px){

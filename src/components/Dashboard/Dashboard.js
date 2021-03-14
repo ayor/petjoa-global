@@ -8,22 +8,22 @@ import BackToTop from '../BackToTop/BackToTop';
 import { Switch, Route } from "react-router-dom";
 
 const Dashboard = (props) => (<React.Fragment>
-        <div className="container">
-            <div className="row vh-100" >
-                <div className={"col-12 col-md-12 h-100 col-lg-12 mt-lg-5 text-light "} id="dashboard">
-                    <DashboardNav />
-                    <Switch>
-                        <Route render={() => <Settings {...props} />} path="/dashboard/settings" />
-                        <Route render={() => <Summary {...props} />} path="/dashboard/summary" />
-                        <Route render={() => <Loan {...props} />} path="/dashboard/loan" />
-                    </Switch>
+    <div className="container">
+        <div className="row vh-100">
+            <div className={"col-12 col-md-12 h-100 col-lg-12 mt-lg-5 text-light "} id="dashboard">
+                <DashboardNav />
+                <Switch>
+                    {/* <Route render={() => <AdminDashboard {...props} />} path="/admin/dashboard" /> */}
+                    <Route render={() => <Settings {...props} />} path="/dashboard/settings" />
+                    <Route render={() => <Summary {...props} />} path="/dashboard/summary" />
+                    <Route render={() => <Loan {...props} />} path="/dashboard/loan" />
+                </Switch>
+            </div>
+            <BackToTop destination="#dashboard" />
+        </div >
+    </div>
 
-                </div>
-                <BackToTop destination="#dashboard" />
-            </div >
-        </div>
-
-    </React.Fragment >)
+</React.Fragment >)
 
 
 export default Dashboard;

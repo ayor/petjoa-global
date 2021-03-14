@@ -85,7 +85,7 @@ const Settings = ({ user, updateUser }) => {
                 </div>
                 <div className="row">
                     <div className="input-group col-12  col-md-12">
-                        <label className="py-1 mr-2">Position: </label>
+                        <label className="py-1 mr-2">Role: </label>
                         <input name="position" type="text" className="form-control" ref={register} onChange={handleChange.bind(this, 'position')} value={userState.position} />
                     </div>
                 </div>

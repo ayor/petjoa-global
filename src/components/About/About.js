@@ -30,7 +30,7 @@ const About = () => {
 
                         <div className=" col-12 col-md-6 col-lg-4 mt-3">
                             <div className="card mx-auto" >
-                                <img src={AboutUS} loading="lazy"  className={`card-img-top ${imageClasses[1]}`} alt="about us" />
+                                <img src={AboutUS} loading="lazy"  className={`card-img-top te ${imageClasses[1]}`} alt="about us" />
                                 <div className="card-body" >
                                     <h3 className="h3 text-capitalize text-muted">our services</h3>
                                     <p className=" card-text">We offer a diverse range of loan products to help business people like you build on their success.   Unlike… </p>

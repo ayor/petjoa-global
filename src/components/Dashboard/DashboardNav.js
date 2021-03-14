@@ -4,7 +4,7 @@ import DashboardClasses from './Dashboard.module.css';
 
 const DashboardNav = (props) => (
 
-    <nav className="navbar  navbar-expand p-4 ">
+    <nav className="navbar mt-sm-5 mb-5  navbar-expand p-4 ">
 
         <div className="collapse navbar-collapse border-bottom ">
             <ul className="navbar-nav  ">

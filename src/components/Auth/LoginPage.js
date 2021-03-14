@@ -24,28 +24,38 @@ const LoginPage = (props) => {
 
             if (response.status === 200) {
                 setLoaderState(false);
-                
+
                 localStorage.setItem('token', response.data.token);
-                
-                props.login(response.data.user);
-               
-                props.history.push('/dashboard/summary');                                                         
+
+                const adminStatus = await props.login(response.data.user);
+
+                if (adminStatus) {
+                    props.history.push('/admin/dashboard');
+                    return;
+                };
+
+                props.history.push('/dashboard/summary');
             }
 
-        } catch (error) {
-            debugger
+        } catch ({ response }) {
+            
             setLoaderState(false);
-            switch (error.response.status) {
-                case 401:
-                    setErrorMessage(` ${error.response.data.error['message']}`);
-                    break;
-                case 400:
-                    setErrorMessage(`Kindly enter your ${error.response.data.error['errors'].errors[0].param}`);
-                    break;
-                default:
-                    setErrorMessage(error.response.data.error.message);
-                    break;
+            if (!response) {
+                setErrorMessage("An error occured, kindly check your network connection");
+            } else {
+                switch (response.status) {
+                    case 401:
+                        setErrorMessage(` ${response.data.error['message']}`);
+                        break;
+                    case 400:
+                        setErrorMessage(`Kindly enter your ${response.data.error['errors'].errors[0].param}`);
+                        break;
+                    default:
+                        setErrorMessage(response.data.error.message);
+                        break;
+                }
             }
+
             setTimeout(() => {
                 setErrorMessage("");
             }, 3000);
@@ -78,7 +88,7 @@ const LoginPage = (props) => {
                 props.history.push('/dashboard/summary')
             }
         } catch ({ response }) {
-            debugger
+            
             setLoaderState(false);
             switch (response.status) {
                 case 401:
@@ -101,10 +111,10 @@ const LoginPage = (props) => {
     return (<React.Fragment>
         <div className={"row vh-100 " + LoginClass.LoginHeader}>
             <div className="col h-100 d-flex  flex-column justify-content-around  ">
-                
+
                 <Switch>
-                    <Route path="/auth/signup" render={() => <SignUp signUpHandler={signUpHandler} errorMessage={errorMessage} loadState={loaderState}/>} />
-                    <Route path="/auth" render={() => <Login submitHandler={loginHandler} errorMessage={errorMessage} loadState={loaderState}/>} />
+                    <Route path="/auth/signup" render={() => <SignUp signUpHandler={signUpHandler} errorMessage={errorMessage} loadState={loaderState} />} />
+                    <Route path="/auth" render={() => <Login submitHandler={loginHandler} errorMessage={errorMessage} loadState={loaderState} />} />
                 </Switch>
             </div>
 

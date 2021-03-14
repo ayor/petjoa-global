@@ -12,7 +12,7 @@
   transition: all;
 }
 .Banner_About{
-  width: 60%;
+  width: 70%;
   border:0;
   animation: aboutus 1s ease-in;
   transition: all;
@@ -109,13 +109,9 @@
   
  }
  
- @media (max-width: 1024px){
-        
-        
-       
-      }
 
-      @media (max-width: 900px){
+
+      @media (max-width: 1024px){
        .Banner_About{
          width: 100%
        }
