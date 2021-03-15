@@ -85,7 +85,7 @@ const Navigation = props => {
                         
                             title="logout"
                             onClick={handleSignOut.bind(this, false)}
-                            className="nav-link mx-2 text-uppercase text-success">Sign Out</button>
+                            className=" btn btn-outline-success nav-link mx-2 text-uppercase ">Sign Out</button>
                     </li>, props.user.type === "AD" ? (<li key={3} className="nav-item">
                         <NavLink
                             to="/admin/dashboard"
