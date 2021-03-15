@@ -81,10 +81,11 @@ const Navigation = props => {
                             {"Hi, " + props.user.firstname}</NavLink>
                     </li>,
                     <li key={2} className="nav-item ">
-                        <a  
+                        <button  
+                        
                             title="logout"
                             onClick={handleSignOut.bind(this, false)}
-                            className="nav-link mx-2 text-uppercase text-success">Sign Out</a>
+                            className="nav-link mx-2 text-uppercase text-success">Sign Out</button>
                     </li>, props.user.type === "AD" ? (<li key={3} className="nav-item">
                         <NavLink
                             to="/admin/dashboard"

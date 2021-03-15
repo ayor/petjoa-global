@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Home/Home';
 import Navigation from './Navigation/Navigation';
 import Dashboard from '../components/Dashboard/Dashboard'

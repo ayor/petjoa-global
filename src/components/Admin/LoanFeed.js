@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import LoanDetail from './LoanDetail';
 import { axiosInstance } from "../../axios-instance";
 
@@ -32,7 +32,6 @@ const LoanFeed = props => {
             setShowDetail(false);
            
         } catch (error) {
-console.log(error)
         }
 
     }

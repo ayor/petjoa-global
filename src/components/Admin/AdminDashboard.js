@@ -3,7 +3,6 @@ import LoanFeeds from "./LoanFeeds";
 import BackToTop from '../BackToTop/BackToTop';
 import AdminSummary from './AdminSummary';
 import { axiosInstance } from '../../axios-instance';
-import { Switch, Route } from "react-router-dom";
 
 const getLoans = async () => {
 

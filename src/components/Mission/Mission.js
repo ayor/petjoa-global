@@ -16,7 +16,6 @@ const Mission = props => (
                         <p className="  text-muted "> We are committed to supporting young individuals to achieve thier dreams of fulfilling their educational dreams. </p>
                     </div>
                 </div>
-
             </div>
 
             <div className="col-12 col-md-6 col-lg-4 ">
