@@ -3,7 +3,7 @@ import css_classes from "./AdminDashboard.module.css";
 
 const LoanDetail = props => {
 
-    console.log(props)
+
     return(<div className={" p-3 text-light "+ css_classes.LoanDetail}  >
     <p className="d-block"><span className="text-light">Requested By: </span>{props.loan.user.firstname }</p>
     <p className="text-capitalize" ><span className="text-light">Loan Type: </span> {props.loan.type} </p>

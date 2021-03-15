@@ -8,8 +8,8 @@ import missionClasses from './Mission.module.css';
 const Mission = props => (
     <React.Fragment>
         <div className="row mt-5 justify-content-center p-5" id="products">
-            <div className="col-12 col-md-6 col-lg-3">
-                <div className={"card p-2  mb-3 " + missionClasses.Cards} >
+            <div className="col-12 col-md-6 col-lg-4">
+                <div className={"card p-2  mb-4 " + missionClasses.Cards} >
                     <img src={studentImg} className="img-fluid rounded card-image-top w-50 mx-auto " alt="students loan" />
                     <div className="card-body" >
                         <h3 className=" text-capitalize text-center mb-2 font-weight-bold">Students Loans</h3>
@@ -19,8 +19,8 @@ const Mission = props => (
 
             </div>
 
-            <div className="col-12 col-md-6 col-lg-3 ">
-                <div className={"card p-2  mb-3 " + missionClasses.Cards} >
+            <div className="col-12 col-md-6 col-lg-4 ">
+                <div className={"card p-2  mb-4 " + missionClasses.Cards} >
                     <img src={personalImg} className="img-fluid rounded  card-image-top w-50 mx-auto" alt="personal loan" />
 
                     <div className="card-body" >
@@ -31,8 +31,8 @@ const Mission = props => (
 
             </div>
 
-            <div className="col-12 col-md-6 col-lg-3">
-                <div className={"card p-2  mb-3 " + missionClasses.Cards} >
+            <div className="col-12 col-md-6 col-lg-4">
+                <div className={"card p-2  mb-4 " + missionClasses.Cards} >
                     <img src={enterpriseImg} className="img-fluid rounded  card-image-top w-50 mx-auto" alt="enterprise loan" />
                     <div className="card-body" >
                         <h3 className=" text-center text-capitalize mb-2 font-weight-bold text-dark">Enterprise Loans</h3>
@@ -50,7 +50,7 @@ const Mission = props => (
                     <p className="text-muted" > We make use of technology to save your time and our processes are tailored to remove bottlenecks which include uneccesary paper work in processing your loan. </p>
                 </div>
                 <div className="row">
-                    <div className="col text-center">
+                    <div className="col-12 col-md-6 col-lg-4 text-center">
                         <div className="card p-2 border-0 mb-3 bg-dark" >
                             <div className="card-body text-light" >
                                 <h3 className="h3 text-capitalize font-weight-bold">Step 1</h3>
@@ -60,7 +60,7 @@ const Mission = props => (
                         </div>
                     </div>
 
-                    <div className="col text-center">
+                    <div className="col-12 col-md-6 col-lg-4 text-center">
                         <div className="card p-2 border-0 mb-3 bg-dark" >
                             <div className="card-body text-light" >
                                 <h3 className="h3 text-capitalize  font-weight-bold">Step 2</h3>
@@ -69,7 +69,7 @@ const Mission = props => (
                         </div>
                     </div>
 
-                    <div className="col text-center">
+                    <div className="col-12 col-md-6 col-lg-4 text-center">
                         <div className="card p-2 border-0 mb-3 bg-dark" >
                             <div className="card-body text-light" >
                                 <h3 className="h3 text-capitalize  font-weight-bold">Step 3</h3>

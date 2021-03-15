@@ -44,6 +44,11 @@
 }
 @media (max-width: 500px){
     .Banner{
-        width: 50%;
+        width: 140%;
     }
+    .HeaderText > h3{
+        font-size: small;
+    }
+    
+
 }

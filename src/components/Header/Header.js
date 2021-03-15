@@ -26,7 +26,7 @@ const Header = (props) => {
                                 <h3 className="  text-muted font-weight-bold">Secure your financial strength in as little as 10 minutes...</h3>
                             </div>
                             <div className={" mt-5 "+headerClass.Banner}>
-                                <button onClick={btnHandler} className="btn btn-success p-3 d-block w-50" >Get A Loan <i className="ml-3 fa fa-long-arrow-right"></i></button>
+                                <button onClick={btnHandler} className="btn btn-success p-3 d-block " >Get A Loan <i className="ml-3 fa fa-long-arrow-right"></i></button>
                             </div>
                         </div>
                     </div>

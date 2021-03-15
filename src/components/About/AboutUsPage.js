@@ -30,19 +30,18 @@ const AboutUsPage = () => {
         }
     }, [])
     return (<React.Fragment>
-        <div className={`row   ${AboutUs_Classes.AboutUs}`} id="About">
-            <div className="col  h-100 ">
+        <div className={`row ${AboutUs_Classes.AboutUs}`} id="About">
+            <div className="col h-100 ">
                 <div className="row h-100 align-items-center ">
-                    <div className="col ">
-                        <div className={`text-right my-2 `}>
+                    <div className="col-12 col-md-6 ">
+                        <div className={`text-center text-md-right my-2 `}>
 
                             <img src={AboutUS} alt="secure transactions" className={"img-fluid rounded ml-auto " + aboutUs[1]} />
                         </div>
-
                     </div>
 
-                    <div className="col">
-                        <div className={` p-5  ${aboutUs[0]}`}>
+                    <div className="col-12 col-md-6">
+                        <div className={` p-5 text-center text-md-left ${aboutUs[0]}`}>
                             <p className="text-success text-uppercase mb-5 font-weight-bold">Financial security at your fingertip</p>
 
                             <h1 className="text-dark mb-4 font-weight-bold"> Faster, Secure and with lower rates than you can ever imagine...</h1>
@@ -61,27 +60,26 @@ const AboutUsPage = () => {
         </div>
         <div className={`row  bg-light `} >
             <div className="col  h-100 ">
-                <div className="row h-100 align-items-center ">
-                <div className="col">
-                        <div className={`  ml-auto p-5  ${aboutUs[0]}`}>
-                            <p className="text-danger text-uppercase mb-5 font-weight-bold">Technology and Finance at its finest</p>
-
-                            <h1 className=" text-dark mb-4 font-weight-bold"> We are here to guide and help you!</h1>
-
-                            <p className=" text-muted "> leveraging latest technoloical advancemets in the fin-tech space, we are delighted to providing ease while doing business with you .</p>
-                            
-                        </div>
-
-                    </div>
-
-                    <div className="col ">
+                <div className="row d-flex flex-md-row-reverse h-100 align-items-center ">
+                    
+                    <div className="col-12 col-md-6 ">
                         <div className={`text-left my-2 `}>
 
                             <img src={help} alt="secure transactions" className={"img-fluid rounded  " + aboutUs[1]} />
                         </div>
 
                     </div>
+                    <div className="col-12 col-md-6">
+                        <div className={`  ml-auto p-5  text-center text-md-right  ${aboutUs[0]}`}>
+                            <p className="text-danger text-uppercase mb-5 font-weight-bold">Technology and Finance at its finest</p>
 
+                            <h1 className=" text-dark mb-4 font-weight-bold"> We are here to guide and help you!</h1>
+
+                            <p className=" text-muted "> leveraging latest technoloical advancemets in the fin-tech space, we are delighted to providing ease while doing business with you .</p>
+
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
