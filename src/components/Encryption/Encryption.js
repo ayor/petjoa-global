@@ -33,7 +33,7 @@ const Encryption = (props) => {
 
   const handleEncrypt = () => {
     setcontent(
-      '$^&%^*O*)W*(*EGYE*@TE@*FD^*&@(*))E*(*@EYHGV@YE*^T&@(*)@O@U(*GV@*@(&@!(@*)(&)@)*@&#G@(*&@)($H$)*Y$)&@)(U$@*'
+      'LKJHBWRFIWRIFWUFBJWFII87074YR093URU7)*TW*^*)&T(*^&@T(*$&^@(*$&)@*&^@*$*)&$^&%^*O*)W*(*EGYE*@TE@*FD^*&@(*))E*(*@EYHGV@YE*^T&@(*)@O@U(*GV@*@(&@!(@*)(&)@)*@&#G@(*&@)($H$)*Y$)&@)(U$@*'
     );
     setShowDecrypt(true);
   };
