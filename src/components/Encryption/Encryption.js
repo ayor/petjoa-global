@@ -1,9 +1,7 @@
 import React, { useRef, useState } from 'react';
 import {
   Typography,
-  Select,
   Checkbox,
-  FormGroup,
   TextField,
   FormControlLabel,
   TextareaAutosize,

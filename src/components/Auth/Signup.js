@@ -5,9 +5,9 @@ import { useForm } from 'react-hook-form';
 import Loader from '../Loading/Loading';
 
 const Signup = (props) => {
-  const { handleSubmit, errors, register, watch } = useForm();
+  const { handleSubmit, errors, register } = useForm();
 
-  const watchGender = watch('gender');
+  //   const watchGender = watch('gender');
 
   return (
     <React.Fragment>

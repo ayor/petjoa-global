@@ -2,8 +2,8 @@ import React, { useReducer } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Home/Home';
 import Navigation from './Navigation/Navigation';
-import Dashboard from '../components/Dashboard/Dashboard';
-import AdminDashboard from '../components/Admin/AdminDashboard';
+// import Dashboard from '../components/Dashboard/Dashboard';
+// import AdminDashboard from '../components/Admin/AdminDashboard';
 import LoginPage from './Auth/LoginPage';
 import SideDrawer from './SideDrawer/SideDrawer';
 import { axiosInstance } from '../axios-instance';
@@ -74,9 +74,9 @@ const Layout = (props) => {
     dispatch({ type: 'UPDATE_USER', payload: {} });
   };
 
-  const updateUserHandler = (userData) => {
-    dispatch({ type: 'UPDATE_USER', payload: userData });
-  };
+  //   const updateUserHandler = (userData) => {
+  //     dispatch({ type: 'UPDATE_USER', payload: userData });
+  //   };
 
   const sideDrawer = state.sideDrawerState ? (
     <SideDrawer
