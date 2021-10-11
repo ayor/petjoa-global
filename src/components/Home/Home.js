@@ -7,9 +7,9 @@ import Header from '../Header/Header';
 const Home = (props) => (
         <React.Fragment >
             <Header {...props} />
-            <About />
+            {/* <About />
             <Mission />
-            <BackToTop destination="#home"/>
+            <BackToTop destination="#home"/> */}
         </React.Fragment >);
 
 export default Home;

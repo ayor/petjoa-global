@@ -46,7 +46,7 @@ const Navigation = props => {
                             onClick={handleNavClick.bind(this, "home")}
                              className={page === "home" ? navActiveState.join(' ') : navState.join(' ')}>Home</NavLink>
                         </li>
-                        <li className="nav-item ">
+                        {/* <li className="nav-item ">
                             <a href="/home#About"
                                 title="About us"
                                 onClick={handleNavClick.bind(this, "about")}
@@ -59,7 +59,8 @@ const Navigation = props => {
                                 className={page === "products" ? navActiveState.join(' ') : navState.join(' ')}>
                                 Products</a>
                         </li>
-                    </ul>
+                    */}
+                    </ul> 
                 </div>
             </div>
             <div className={NavClasses.NavLink}>
